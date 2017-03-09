@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 	apt-get update && apt-get install -y nodejs
 
+RUN npm install npm@latest -g
+
 # Dotnet
 RUN echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" | tee /etc/apt/sources.list.d/dotnetdev.list && \
 	apt-get update && apt-get install -y dotnet-dev-1.0.0-preview2.1-003177
